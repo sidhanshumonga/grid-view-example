@@ -1,0 +1,38 @@
+<div class="row p-5">
+    <div class="col p-5">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.textActive"
+                (click)="allFalse('textActive')">Text only</button>
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.textImageRActive"
+                (click)="allFalse('textImageRActive')">Text and image right</button>
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.textImageLActive"
+                (click)="allFalse('textImageLActive')">Text and image left</button>
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.imageImageActive"
+                (click)="allFalse('imageImageActive')">Image and Image</button>
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.cornerImageActive"
+                (click)="allFalse('cornerImageActive')">Corner right image with text</button>
+            <button type="button" class="btn btn-outline-secondary" [class.active]="activeFields.cornerImageRActive"
+                (click)="allFalse('cornerImageRActive')">Corner left image with text</button>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col col-8 border container-div p-4">
+        <div class="row container-content justify-content-center">
+
+            <div class="col-3 border m-1 img-1" style="height: 50%" *ngIf="activeFields.cornerImageRActive">
+            </div>
+
+            <div class="col-5 border m-1 img-1" *ngIf="activeFields.textImageLActive || activeFields.imageImageActive">
+            </div>
+            <div class="col m-1" *ngIf="!(activeFields.imageImageActive)" [class.col-8]="activeFields.cornerImageActive">
+                <textarea class="textarea-text">{{DEMO_TEXT}}</textarea>
+            </div>
+            <div class="col-5 border m-1 img-1" [class.col-3]="activeFields.cornerImageActive"
+                *ngIf="activeFields.textImageRActive || activeFields.imageImageActive">
+            </div>
+            <div class="col-3 border m-1 img-1" style="height: 50%" *ngIf="activeFields.cornerImageActive">
+            </div>
+        </div>
+    </div>
+</div>

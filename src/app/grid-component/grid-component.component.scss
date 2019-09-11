@@ -1,0 +1,47 @@
+button:focus{
+    outline:none !important;
+    box-shadow: none !important;
+}
+button:hover{
+    background-color: #f3f3f3;
+    color:gray;
+}
+
+.container-div{
+    height:50vh
+}
+.container-content{
+    height:100%
+}
+
+.textarea-text{
+    width:100%;
+    height:100%;
+    border:none;
+    resize:none;
+    text-align: justify
+}
+
+.textarea-text:focus{
+    outline:none;
+    border:none;
+}
+
+div{
+    transition: all 1s ease;
+}
+
+.upload-btn:hover, .upload-btn:focus{
+    background: gray;
+    color:white;
+}
+
+.upload-btn-row{
+    position: relative;
+    top:42%;
+}
+
+.img-1{
+    background-image: url('https://i1.wp.com/cms.babbel.news/wp-content/uploads/2018/07/AnimalsInGerman.png');
+    background-size: cover;
+}
